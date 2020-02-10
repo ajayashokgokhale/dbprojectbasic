@@ -1,72 +1,113 @@
-<?php include_once './constants.php'; include_once './dbinfo.php'; ?>
+<?php include_once './constants.php';
+include_once './dbinfo.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
-    <?php $page_title = 'Home'; $page_menu = 'home'; ?>
-  <?php include_once './header.php'; ?>
+<?php $page_title = 'Home';
+$page_menu = 'home'; ?>
+<?php include_once './header.php'; ?>
 
-  <body>
-    <?php include_once './topmenu.php'; ?>
+<body>
+  <?php include_once './topmenu.php'; ?>
 
-    <div class="container">
+  <div class="container">
+    <div class="col-md-12">
+      <form class="form-horizontal" method="post" action="new_reg.php" >
+        <fieldset>
 
-      <div class="row row-offcanvas row-offcanvas-right">
+          <!-- Form Name -->
+          <legend>Registration Form</legend>
 
-        <div class="col-xs-12 col-md-12">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="fname">First Name</label>
+            <div class="col-md-4">
+              <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md" required="">
+              <span class="help-block">Enter First Name</span>
+            </div>
+          </div>
 
-          <div class="row">
-              <div class="col-md-12">
-                  <form name="frm_search" id="frm_search" method="post" action="search.php">
-                      <input type="text" name="search" id="search" required="" >
-                  <input type="submit" name="submit" value="Submit">
-                  </form>
-              </div>
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-            <div class="col-xs-6 col-lg-4">
-              <h2>Heading</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
-              <p><a class="btn btn-default" href="#" role="button">View details &raquo;</a></p>
-            </div><!--/.col-xs-6.col-lg-4-->
-          </div><!--/row-->
-        </div><!--/.col-xs-12.col-sm-9-->
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="lname">Last Name</label>
+            <div class="col-md-4">
+              <input id="lname" name="lname" type="text" placeholder="Last Name" class="form-control input-md" required="">
+              <span class="help-block">Enter Last Name</span>
+            </div>
+          </div>
 
-        
-      </div><!--/row-->
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="mobile">Mobile</label>
+            <div class="col-md-4">
+              <input id="mobile" name="mobile" maxlength="10" type="text" placeholder="Mobile Number" class="form-control input-md" required="">
+              <span class="help-block">Enter Mobile</span>
+            </div>
+          </div>
 
-      <hr>
+          <!-- Text input-->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="email">Email</label>
+            <div class="col-md-4">
+              <input id="email" name="email" type="email" placeholder="Enter Email" class="form-control input-md">
+              <span class="help-block">Enter Email</span>
+            </div>
+          </div>
 
-      <?php include_once 'footer.php'; ?>
+          <!-- Multiple Radios (inline) -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="radios_reg">Registration Type</label>
+            <div class="col-md-4">
+              <label class="radio-inline" for="radios_reg-0">
+                <input type="radio" name="radios_reg" id="radios_reg-0" value="N" checked="checked">
+                New
+              </label>
+              <label class="radio-inline" for="radios_reg-1">
+                <input type="radio" name="radios_reg" id="radios_reg-1" value="E">
+                Existing
+              </label>
+            </div>
+          </div>
 
-    </div><!--/.container-->
+          <!-- Select Basic -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="notifications">Notifications</label>
+            <div class="col-md-4">
+              <select id="notifications" name="notifications" class="form-control">
+                <option value="Y">Yes - All</option>
+                <option value="N">No</option>
+                <option value="I">Important Only</option>
+              </select>
+            </div>
+          </div>
+
+          <!-- Button -->
+          <div class="form-group">
+            <label class="col-md-4 control-label" for="submit"></label>
+            <div class="col-md-4">
+              <button id="submit" name="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </div>
 
 
-<?php include_once 'footer_scripts.php'; ?>
-  </body>
+
+        </fieldset>
+      </form>
+
+
+    </div>
+
+
+
+    <hr>
+
+    <?php include_once 'footer.php'; ?>
+
+  </div>
+  <!--/.container-->
+
+
+  <?php include_once 'footer_scripts.php'; ?>
+</body>
+
 </html>
