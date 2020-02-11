@@ -1,0 +1,32 @@
+https://www.mysqltutorial.org/mysql-sample-database.aspx
+
+SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, city, state, country
+FROM customers
+
+SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, city, state, country
+FROM customers
+ORDER BY customerName ASC
+
+
+SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, city, state, country
+FROM customers 
+WHERE country = 'USA' OR country = 'France'
+ORDER BY customerName ASC
+
+
+
+SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, city, state, country
+FROM customers 
+WHERE country IN('USA','France')
+ORDER BY customerName ASC
+
+SELECT customerNumber, customerName, contactLastName, contactFirstName, phone, city, state, country
+FROM customers 
+WHERE country NOT IN('USA','France')
+ORDER BY customerName ASC
+
+SELECT c.customerNumber, c.customerName, c.contactLastName, c.contactFirstName, c.phone, c.city, c.state, c.country,
+o.orderNumber, o.orderDate, o.status, o.comments
+FROM customers c
+LEFT JOIN orders o ON(c.customerNumber = o.customerNumber )
+
