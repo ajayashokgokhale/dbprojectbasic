@@ -3,8 +3,8 @@ include_once './dbinfo.php'; ?>
 
 <!DOCTYPE html>
 <html lang="en">
-<?php $page_title = 'Delete';
-$page_menu = 'delete'; ?>
+<?php $page_title = 'Edit';
+$page_menu = 'edit'; ?>
 <?php include_once './header.php'; ?>
 
 <body>
@@ -12,11 +12,11 @@ $page_menu = 'delete'; ?>
 
   <div class="container">
     <div class="col-md-12">
-      <form class="form-horizontal" method="post" action="del_reg.php" >
+      <form class="form-horizontal" method="post" action="edit_reg.php" >
         <fieldset>
 
           <!-- Form Name -->
-          <legend>Delete Registration</legend>
+          <legend>Edit Registration</legend>
 
           
 

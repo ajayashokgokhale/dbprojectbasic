@@ -12,9 +12,10 @@
         </div>
         <div id="navbar" class="collapse navbar-collapse">
             <ul class="nav navbar-nav">
-                <li <?php echo ($page_menu == 'home' ? 'class="active"' : ''); ?> ><a href="/">Home</a></li>
-                
-                
+                <li <?php echo ($page_menu == 'home' ? 'class="active"' : ''); ?> ><a href="index.php">Home</a></li>
+                <li <?php echo ($page_menu == 'list' ? 'class="active"' : ''); ?> ><a href="list_reg.php">List</a></li>
+                <li <?php echo ($page_menu == 'delete' ? 'class="active"' : ''); ?> ><a href="delete.php">Delete</a></li>
+                <li <?php echo ($page_menu == 'edit' ? 'class="active"' : ''); ?> ><a href="edit.php">Edit</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </div><!-- /.nav-collapse -->

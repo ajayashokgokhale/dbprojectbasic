@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jul 22, 2018 at 07:37 AM
+-- Generation Time: Feb 11, 2020 at 04:52 AM
 -- Server version: 10.1.32-MariaDB
 -- PHP Version: 7.2.5
 
@@ -31,18 +31,22 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `studentmaster`;
 CREATE TABLE `studentmaster` (
   `id` int(11) NOT NULL,
-  `student_name` varchar(50) NOT NULL,
-  `student_email` varchar(50) NOT NULL,
-  `student_mobile` varchar(10) NOT NULL
+  `fname` varchar(50) NOT NULL,
+  `lname` varchar(50) NOT NULL,
+  `email` varchar(100) DEFAULT NULL,
+  `mobile` varchar(10) NOT NULL,
+  `reg_type` enum('N','E') NOT NULL DEFAULT 'N',
+  `notifications` enum('Y','N','I') NOT NULL DEFAULT 'N',
+  `date_added` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `studentmaster`
 --
 
-INSERT INTO `studentmaster` (`id`, `student_name`, `student_email`, `student_mobile`) VALUES
-(1, 'Vishal', 'vishal@domain.com', '9898666612'),
-(2, 'Manoj', 'manoj@domain.com', '9898666611');
+INSERT INTO `studentmaster` (`id`, `fname`, `lname`, `email`, `mobile`, `reg_type`, `notifications`, `date_added`) VALUES
+(1, 'aaa Name', 'bbb Last', 'aaemail@bb.com', '9922531531', 'N', 'I', '0000-00-00 00:00:00'),
+(2, '', '', NULL, '', 'N', 'N', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
