@@ -1,6 +1,5 @@
 <?php include_once './constants.php';
 include_once './dbinfo.php'; ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <?php $page_title = 'Home';
@@ -12,7 +11,7 @@ $page_menu = 'home'; ?>
 
   <div class="container">
     <div class="col-md-12">
-      <form class="form-horizontal" method="post" action="new_reg.php" >
+      <form class="form-horizontal" method="post" action="new_reg.php">
         <fieldset>
 
           <!-- Form Name -->

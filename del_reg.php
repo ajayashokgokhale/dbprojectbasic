@@ -14,7 +14,7 @@ $sql = "DELETE FROM
         studentmaster 
         WHERE  
         mobile='" . $_POST['mobile'] . "' ";
-
+echo '<br>SQL: ' . $sql ;
 $result = mysqli_query($db, $sql);
 
 $rows_deleted = mysqli_affected_rows($db);

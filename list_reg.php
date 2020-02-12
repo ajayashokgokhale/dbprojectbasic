@@ -5,7 +5,7 @@ include_once './dbinfo.php';
 
 /** Need to update query **/
 
-$sql = "SELECT * FROM studentmaster ORDER BY id DESC ";
+$sql = "SELECT * FROM studentmaster ORDER BY id ASC ";
 
 $result = mysqli_query($db, $sql);
 

@@ -19,7 +19,7 @@ $sql = "INSERT INTO
         mobile='" . $_POST['mobile'] . "',
         notifications='" . $_POST['notifications'] . "',
         date_added='" . date('Y-m-d H:i:s') . "' ";
-
+echo '<br>SQL: ' . $sql ;
 $result = mysqli_query($db, $sql);
 
 

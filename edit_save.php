@@ -18,7 +18,7 @@ $sql = "UPDATE
         email='" . $_POST['email'] . "',        
         notifications='" . $_POST['notifications'] . "'
         WHERE id = '" . $_POST['id'] . "' ";
-
+echo '<br>SQL: ' . $sql ;
 $result = mysqli_query($db, $sql);
 
 
